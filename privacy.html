@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — TransferWatch</title>
+    <meta name="description" content="TransferWatch Privacy Policy. TransferWatch does not collect any personal data.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(160deg, #0a1628, #0d2147);
+            color: #fff;
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        header a {
+            color: #93c5fd;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        header a:hover { color: #fff; }
+
+        header h1 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        header .updated {
+            color: #93c5fd;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        .content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+
+        .summary-box {
+            background: #dcfce7;
+            border: 1px solid #86efac;
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-bottom: 48px;
+        }
+
+        .summary-box h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #15803d;
+            margin-bottom: 10px;
+        }
+
+        .summary-box p {
+            color: #166534;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 40px 0 12px;
+            color: #0f172a;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        h2:first-of-type { margin-top: 0; }
+
+        p { margin-bottom: 16px; color: #334155; }
+
+        ul {
+            margin: 0 0 16px 20px;
+            color: #334155;
+        }
+
+        ul li { margin-bottom: 8px; }
+
+        .section { margin-bottom: 8px; }
+
+        strong { color: #0f172a; }
+
+        footer {
+            background: #0a1628;
+            color: #475569;
+            text-align: center;
+            padding: 28px 24px;
+            font-size: 0.85rem;
+        }
+
+        footer a { color: #64748b; text-decoration: none; }
+        footer a:hover { color: #94a3b8; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">← Back to TransferWatch</a>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: July 2026</p>
+</header>
+
+<div class="content">
+
+    <div class="summary-box">
+        <h2>✅ The short version</h2>
+        <p>TransferWatch does not collect, store, transmit, or share any personal information. Everything stays on your device.</p>
+    </div>
+
+    <div class="section">
+        <h2>1. Overview</h2>
+        <p>TransferWatch ("the app") is developed by Donovan Price for use by airport transfer drivers. This privacy policy explains what data the app accesses, how it is used, and your rights as a user.</p>
+        <p>TransferWatch is designed with privacy as a core principle. The app does not operate any servers, does not create user accounts, and does not transmit personal information to any party other than the flight data API described below.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Calendar Access</h2>
+        <p>TransferWatch requests full access to your device's calendar in order to:</p>
+        <ul>
+            <li>Read event titles, notes, and locations to detect flight numbers</li>
+            <li>Display booking details (client name, address, phone) within the app</li>
+            <li>Monitor changes to calendar events in real time</li>
+        </ul>
+        <p><strong>Your calendar data is never transmitted outside your device.</strong> It is read locally and used only to display information within the app. No calendar content is sent to any server operated by the app developer.</p>
+    </div>
+
+    <div class="section">
+        <h2>3. Flight Data — AeroDataBox</h2>
+        <p>To look up live flight status, TransferWatch sends flight numbers (e.g. QF404) to <strong>AeroDataBox</strong>, a third-party aviation data service accessed via the API.market gateway. The only information sent is the flight identifier and a date window.</p>
+        <p><strong>No personal information is included in these requests.</strong> Client names, phone numbers, addresses, and calendar notes are never sent to AeroDataBox, API.market, or any other service.</p>
+        <p>API.market's privacy policy is available at <a href="https://api.market/privacy_policy" target="_blank" rel="noopener">api.market/privacy_policy</a>.</p>
+        <p>The AeroDataBox API key you enter in Settings is stored only in your device's local storage (UserDefaults) and is never transmitted to any party other than the AeroDataBox API endpoint.</p>
+    </div>
+
+    <div class="section">
+        <h2>4. Notifications</h2>
+        <p>TransferWatch uses Apple's local notification system to deliver alerts about flight status changes, reminders, and delays. All notifications are generated on your device. No notification content is sent to any external server.</p>
+    </div>
+
+    <div class="section">
+        <h2>5. Data Storage</h2>
+        <p>The app stores the following data locally on your device using Apple's UserDefaults and standard app storage:</p>
+        <ul>
+            <li>Your selected calendar identifier</li>
+            <li>Your AeroDataBox API key</li>
+            <li>Cached flight status data (to persist between app launches)</li>
+        </ul>
+        <p>This data is stored only on your device and is removed when you delete the app. It is not backed up to iCloud or any other cloud service.</p>
+    </div>
+
+    <div class="section">
+        <h2>6. Third-Party Services</h2>
+        <p>TransferWatch uses one third-party service:</p>
+        <ul>
+            <li><strong>AeroDataBox (via API.market)</strong> — receives flight identifiers only (no personal data). See their privacy policy at <a href="https://api.market/privacy_policy" target="_blank" rel="noopener">api.market/privacy_policy</a>.</li>
+        </ul>
+        <p>The app does not use analytics, advertising networks, crash reporting services, or any other third-party SDKs.</p>
+    </div>
+
+    <div class="section">
+        <h2>7. Children's Privacy</h2>
+        <p>TransferWatch is not directed at children under the age of 13 and does not knowingly collect any information from children.</p>
+    </div>
+
+    <div class="section">
+        <h2>8. Changes to This Policy</h2>
+        <p>If this privacy policy changes, the updated version will be posted at this URL with a revised date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <div class="section">
+        <h2>9. Contact</h2>
+        <p>If you have any questions about this privacy policy or the app's data practices, please contact:</p>
+        <p><strong>Donovan Price</strong><br>
+        <a href="mailto:support@pricelabs.au">support@pricelabs.au</a></p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Donovan Price &nbsp;·&nbsp; <a href="index.html">TransferWatch</a> &nbsp;·&nbsp; <a href="mailto:support@pricelabs.au">Contact</a></p>
+</footer>
+
+</body>
+</html>
