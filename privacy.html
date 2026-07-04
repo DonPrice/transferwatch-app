@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — TransferWatch</title>
-    <meta name="description" content="TransferWatch Privacy Policy. TransferWatch does not collect any personal data.">
+    <meta name="description" content="TransferWatch Privacy Policy. Your data stays on your device and your own self-hosted server — never with outside companies.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -117,13 +117,13 @@
 
     <div class="summary-box">
         <h2>✅ The short version</h2>
-        <p>TransferWatch does not collect, store, transmit, or share any personal information. Everything stays on your device.</p>
+        <p>TransferWatch keeps your data under your control. Your calendar is read on-device, flight lookups send only flight numbers, and booking and message data syncs only with your own self-hosted server. Nothing is sold, shared, or sent to analytics or advertising companies.</p>
     </div>
 
     <div class="section">
         <h2>1. Overview</h2>
-        <p>TransferWatch ("the app") is developed by Donovan Price for use by airport transfer drivers. This privacy policy explains what data the app accesses, how it is used, and your rights as a user.</p>
-        <p>TransferWatch is designed with privacy as a core principle. The app does not operate any servers, does not create user accounts, and does not transmit personal information to any party other than the flight data API described below.</p>
+        <p>TransferWatch ("the app") is developed by Donovan Price for use by airport transfer operators. This privacy policy explains what data the app accesses, where it goes, and your rights as a user.</p>
+        <p>The app does not create user accounts and does not use analytics, advertising, or tracking of any kind. It communicates with exactly two kinds of endpoints: aviation data services that receive <strong>flight numbers only</strong> (Sections 3–4), and — only if you configure them — <strong>your own self-hosted companion services</strong> that you operate for your business (Section 5). No data is ever sent to any other party.</p>
     </div>
 
     <div class="section">
@@ -134,54 +134,74 @@
             <li>Display booking details (client name, address, phone) within the app</li>
             <li>Monitor changes to calendar events in real time</li>
         </ul>
-        <p><strong>Your calendar data is never transmitted outside your device.</strong> It is read locally and used only to display information within the app. No calendar content is sent to any server operated by the app developer.</p>
+        <p>Calendar content is read locally and used to display information within the app. It is not transmitted off your device, with one exception under your control: if you use the optional messaging features (Section 5), booking details you choose to include in a message — for example a pickup confirmation SMS — are delivered through your own self-hosted server.</p>
     </div>
 
     <div class="section">
         <h2>3. Flight Data — AeroDataBox</h2>
         <p>To look up live flight status, TransferWatch sends flight numbers (e.g. QF404) to <strong>AeroDataBox</strong>, a third-party aviation data service accessed via the API.market gateway. The only information sent is the flight identifier and a date window.</p>
-        <p><strong>No personal information is included in these requests.</strong> Client names, phone numbers, addresses, and calendar notes are never sent to AeroDataBox, API.market, or any other service.</p>
-        <p>API.market's privacy policy is available at <a href="https://api.market/privacy_policy" target="_blank" rel="noopener">api.market/privacy_policy</a>.</p>
-        <p>The AeroDataBox API key you enter in Settings is stored only in your device's local storage (UserDefaults) and is never transmitted to any party other than the AeroDataBox API endpoint.</p>
+        <p><strong>No personal information is included in these requests.</strong> Client names, phone numbers, addresses, and calendar notes are never sent to AeroDataBox or API.market.</p>
+        <p>The AeroDataBox API key you enter in Settings is stored only in your device's local storage and is sent only with these flight lookups, to the API.market gateway endpoint that serves AeroDataBox.</p>
+        <p>See AeroDataBox's privacy policy at <a href="https://aerodatabox.com/privacy/" target="_blank" rel="noopener">aerodatabox.com/privacy</a> and API.market's at <a href="https://api.market/privacy_policy" target="_blank" rel="noopener">api.market/privacy_policy</a>.</p>
     </div>
 
     <div class="section">
-        <h2>4. Notifications</h2>
-        <p>TransferWatch uses Apple's local notification system to deliver alerts about flight status changes, reminders, and delays. All notifications are generated on your device. No notification content is sent to any external server.</p>
+        <h2>4. Optional Codeshare Lookup — AirLabs</h2>
+        <p>If you enable the optional codeshare fallback in Settings (off by default), the app resolves marketing codeshare flight numbers by sending the <strong>flight number only</strong>, together with your AirLabs API key, to <strong>AirLabs</strong> (airlabs.co). Results are cached on your device so each codeshare number is looked up at most once. No personal information is included in these requests.</p>
+        <p>AirLabs' privacy policy is available at <a href="https://airlabs.co/" target="_blank" rel="noopener">airlabs.co</a>.</p>
     </div>
 
     <div class="section">
-        <h2>5. Data Storage</h2>
-        <p>The app stores the following data locally on your device using Apple's UserDefaults and standard app storage:</p>
+        <h2>5. Self-Hosted Companion Services</h2>
+        <p>TransferWatch can optionally connect to companion services that <strong>you host and operate yourself</strong> for your transfer business. Both are off by default and only activate when you enter your own server address and access token in Settings. They are not operated by any outside company, and no data sent to them leaves your control:</p>
         <ul>
-            <li>Your selected calendar identifier</li>
-            <li>Your AeroDataBox API key</li>
-            <li>Cached flight status data (to persist between app launches)</li>
+            <li><strong>Bookings &amp; messaging server (TransferBookings)</strong> — syncs customer SMS conversations and booking requests between the app and your server. This includes customer names, mobile numbers, message content, and booking details. Messages you send from the app are delivered by your server.</li>
+            <li><strong>Flight push relay (flightboard)</strong> — registers your device's Apple push notification tokens with your server so it can send you flight-status alerts and Live Activity updates through the Apple Push Notification service, even when the app is closed.</li>
         </ul>
-        <p>This data is stored only on your device and is removed when you delete the app. It is not backed up to iCloud or any other cloud service.</p>
+        <p>Data stored on these servers is governed by you as their operator. If you never configure these services, the app makes no connection to them.</p>
     </div>
 
     <div class="section">
-        <h2>6. Third-Party Services</h2>
-        <p>TransferWatch uses one third-party service:</p>
+        <h2>6. Notifications</h2>
+        <p>TransferWatch delivers alerts about flight status changes, reminders, and delays. Notifications are generated on your device; if you have configured the optional push relay (Section 5), your own server also sends notifications remotely through the Apple Push Notification service. No outside company composes, receives, or processes notification content.</p>
+    </div>
+
+    <div class="section">
+        <h2>7. Data Stored on Your Device</h2>
+        <p>The app stores the following data locally on your device using Apple's standard app storage:</p>
         <ul>
-            <li><strong>AeroDataBox (via API.market)</strong> — receives flight identifiers only (no personal data). See their privacy policy at <a href="https://api.market/privacy_policy" target="_blank" rel="noopener">api.market/privacy_policy</a>.</li>
+            <li>Your selected calendar identifiers</li>
+            <li>Your AeroDataBox API key, and your AirLabs API key if you use the codeshare fallback</li>
+            <li>The addresses and access tokens of your self-hosted servers, if configured</li>
+            <li>Cached flight status data and codeshare lookups (to persist between app launches)</li>
+            <li>Your message templates and local read-state for message threads</li>
         </ul>
-        <p>The app does not use analytics, advertising networks, crash reporting services, or any other third-party SDKs.</p>
+        <p>This data stays on your device and is removed when you delete the app. Like other app data, it is included in your device's standard encrypted iCloud or computer backup; the app does not run any cloud sync of its own.</p>
     </div>
 
     <div class="section">
-        <h2>7. Children's Privacy</h2>
+        <h2>8. Third-Party Services</h2>
+        <p>TransferWatch uses the following third-party services:</p>
+        <ul>
+            <li><strong>AeroDataBox (via API.market)</strong> — receives flight identifiers only (no personal data). Privacy policies: <a href="https://aerodatabox.com/privacy/" target="_blank" rel="noopener">aerodatabox.com/privacy</a>, <a href="https://api.market/privacy_policy" target="_blank" rel="noopener">api.market/privacy_policy</a>.</li>
+            <li><strong>AirLabs</strong> (optional, off by default) — receives flight identifiers only (no personal data).</li>
+            <li><strong>Apple Push Notification service</strong> (only if the push relay is configured) — carries notifications from your own server to your device, per <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a>.</li>
+        </ul>
+        <p>Your self-hosted companion servers (Section 5) are your own infrastructure, not third parties. The app does not use analytics, advertising networks, crash reporting services, or any other third-party SDKs.</p>
+    </div>
+
+    <div class="section">
+        <h2>9. Children's Privacy</h2>
         <p>TransferWatch is not directed at children under the age of 13 and does not knowingly collect any information from children.</p>
     </div>
 
     <div class="section">
-        <h2>8. Changes to This Policy</h2>
+        <h2>10. Changes to This Policy</h2>
         <p>If this privacy policy changes, the updated version will be posted at this URL with a revised date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
     </div>
 
     <div class="section">
-        <h2>9. Contact</h2>
+        <h2>11. Contact</h2>
         <p>If you have any questions about this privacy policy or the app's data practices, please contact:</p>
         <p><strong>Donovan Price</strong><br>
         <a href="mailto:support@pricelabs.au">support@pricelabs.au</a></p>

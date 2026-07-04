@@ -67,7 +67,7 @@
             flex-wrap: wrap;
         }
 
-        .app-store-btn {
+        .hero-btn {
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -82,8 +82,8 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.25);
         }
 
-        .app-store-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
-        .app-store-btn svg { width: 24px; height: 24px; }
+        .hero-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+        .hero-btn svg { width: 24px; height: 24px; }
 
         /* ── Features ── */
         .section { padding: 80px 24px; }
@@ -297,15 +297,19 @@
 </head>
 <body>
 
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="discord-icon" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></symbol>
+</svg>
+
 <!-- Hero -->
 <section class="hero">
-    <img src="icon.png" alt="TransferWatch app icon" class="app-icon">
+    <img src="icon-web.png" alt="TransferWatch app icon" class="app-icon" width="120" height="120">
     <h1>Transfer<span>Watch</span></h1>
     <p class="subtitle">Airport transfer management for professional drivers. Know the moment a flight changes — before you leave for the airport.</p>
     <div class="badge-row">
-        <a href="#discord" class="app-store-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
-            Join the Community — App Store coming soon
+        <a href="https://discord.gg/NWQpydFdce" class="hero-btn" target="_blank" rel="noopener">
+            <svg fill="currentColor"><use href="#discord-icon"/></svg>
+            Join the Community
         </a>
     </div>
 </section>
@@ -468,18 +472,18 @@
 
 <!-- Privacy strip -->
 <section class="privacy-strip">
-    <h2>Your data stays on your device</h2>
-    <p>TransferWatch does not collect, store, or transmit any personal information. Your calendar access and API key never leave your iPhone.</p>
+    <h2>Your data stays in your hands</h2>
+    <p>TransferWatch reads your calendar on-device, sends only flight numbers to the flight-data service, and syncs bookings and messages only with your own self-hosted server. No analytics, no ads, no data sold or shared with outside companies.</p>
     <a href="privacy.html">Read our Privacy Policy →</a>
 </section>
 
 <!-- Discord -->
 <section class="discord-strip" id="discord">
-    <img src="PriceLabs-Community.jpg" alt="PriceLabs Community" style="width:120px;height:120px;object-fit:cover;border-radius:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+    <img src="PriceLabs-Community.jpg" alt="PriceLabs Community" width="120" height="120" loading="lazy" decoding="async" style="width:120px;height:120px;object-fit:cover;border-radius:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.3);">
     <h2>Join the PriceLabs Community</h2>
     <p>Get help, share feedback, and follow TransferWatch updates on our Discord server.</p>
-    <a class="discord-btn" href="https://discord.gg/NWQpydFdce" target="_blank">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+    <a class="discord-btn" href="https://discord.gg/NWQpydFdce" target="_blank" rel="noopener">
+        <svg width="20" height="20" fill="currentColor"><use href="#discord-icon"/></svg>
         Join Discord
     </a>
 </section>
